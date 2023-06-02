@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+
+body{
+    margin: 0;
+    font-family: 'Concert One', cursive;
+}
+body * {
+    box-sizing: border-box;  /* "*"é meio q um atributo universal que significa que todo mundo dentro do body vai receber essa modificação */
+}
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #201b2c;
+    display: flex; /*Flex faz com quem fiquem lado a lado*/
+    justify-content: center;
+    align-items: center;
+}
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.left-login-image{
+    width: 35vw;
+}
+.left-login > h1 {
+    color: #77ffc0;
+    font-size: 3vw;
+}
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.card-login{
+    width: 60%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #2f2841;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+.card-login>h1{
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+.textfield{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px; /*distancia entre o texto de usuario  e senha, cima pra baixo a caixinha*/
+}
+.textfield>input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #514869;
+    color:#f0ffffde ;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+.textfield > label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+
+}
+.texfield>input::placeholder{
+    color: #f0ffff94;
+
+}
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 15px;
+    outline: none; /*tira um bgl escrota q se forma em volta da caixa*/
+    text-transform: uppercase; /*transforma toda a letra em maiuscula*/
+    font-weight: 800;
+    letter-spacing: 2px; /*espaçacemento das letras*/
+    color: #2b134b ;
+    background: #00ff88;
+    cursor: pointer; /*faz o cursor mudar pro dedinho quando passar em cima*/
+    box-shadow: 0px 10px 40px -12px #00ff88;
+
+}
+@media only screen and (max-width: 950px){ /*configuração especifica pra quando a tela atingir 950 mudar o tamanho*/
+    .card-login{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 600px){ /*mesma coisa so que pra tela menor ainda*/
+    .main-login{
+        flex-direction: column;
+    }
+    .left-login>h1{
+        display: none; /*remove o titulo em telas pequenas, pois não precisa de mt informaçaço em tela pequena*/
+    }
+    .left-login{
+        width: 100%;
+        height: auto;
+
+    }
+    .right-login{
+        width: 100%; /*agr o carda ocupa toda a tela*/
+        height: auto;
+    }
+    .left-login-image{
+        width: 65vw
+    }
+    .card-login{
+        width: 90%;
+
+    }
+}
